@@ -1,0 +1,7 @@
+{
+  "name": "Singer_PCA",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
