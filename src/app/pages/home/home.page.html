@@ -5,5 +5,16 @@
   </ion-toolbar>
 </ion-header>
 <ion-content>
+  <div class="slider-container">
+    <div class="slider-container-artistas">
+      <swiper-container slides-per-view="3">
+        <swiper-slide *ngFor="let artistcontent of slider_artista_content">
+          <img [src]="artistcontent.image" [alt]="artistcontent.title">
+          <h1>{{artistcontent.title}}</h1>
+          <h3>{{artistcontent.subtitle}}</h3>
+        </swiper-slide>
+      </swiper-container>
+    </div>
+  </div>
   <div class="example-content">Listen now content</div>
 </ion-content>

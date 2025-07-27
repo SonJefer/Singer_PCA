@@ -1,5 +1,5 @@
   ion-content {
-  --background: linear-gradient(to bottom, #dc4d4d, #1b0c3e40);
+  --background: linear-gradient(to bottom, #74b8f8 0%, #f7f9fc 30%, #f7f9fc 100%);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -34,11 +34,10 @@
   .slide-content-intro h1 {
       text-align: center;
       padding-top: 20px;
-      color: #fff;
+      color: #000000;
       font-size: 1.2rem;
       font-weight: 700;
       text-transform: uppercase;
-      color: #e5e5ff;
   }
 
    .slide-content-intro h3 {
@@ -46,7 +45,7 @@
       padding-top: 20px;
       font-size: 0.85rem;
       font-weight: 300;
-      color: #9c94d7;
+      color: #363446;
       margin-top: 5px;
   }
 

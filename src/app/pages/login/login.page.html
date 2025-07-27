@@ -3,47 +3,48 @@
 
     <h1 class="tittle">Ingresa con tu <br><span>cuenta</span></h1>
     <p class="subtitle">Ingresa con tu correo y contraseña para ingresar</p>
-  <form [formGroup]="miFormulario" (ngSubmit)="submit()">
-  <div class="login-input">
-    <ion-input  formControlName="email" label="Correo" label-placement="floating" fill="solid" placeholder="Enter text" class="login-input-correo" ></ion-input>
-    <ion-note color="danger" *ngIf="miFormulario.get('email')?.touched && miFormulario.get('email')?.hasError('required')">
-      El correo es obligatorio
-    </ion-note>
-    <ion-note color="danger" *ngIf="miFormulario.get('email')?.touched && miFormulario.get('email')?.hasError('email')">
-      Formato de correo inválido
-    </ion-note>
-    <br>
-    <div class="password-container">
-  <ion-input
-    type="password"
-    formControlName="password"
-    label="Contraseña"
-    label-placement="floating"
-    fill="solid"
-    placeholder="••••••••"
-    class="login-input-contraseña">
-  </ion-input>
-  <ion-note color="danger" *ngIf="miFormulario.get('password')?.touched && miFormulario.get('password')?.hasError('required')">
-    La contraseña es obligatoria
-  </ion-note>
-  <ion-note color="danger" *ngIf="miFormulario.get('password')?.touched && miFormulario.get('password')?.hasError('minlength')">
-    Mínimo 6 caracteres
-  </ion-note>
+    <form [formGroup]="miFormulario" (ngSubmit)="submit()">
+      <div class="login-input">
+        <ion-input formControlName="email" label="Correo" label-placement="floating" fill="solid"
+          placeholder="Enter text" class="login-input-correo"></ion-input>
+        <ion-note color="danger"
+          *ngIf="miFormulario.get('email')?.touched && miFormulario.get('email')?.hasError('required')">
+          El correo es obligatorio
+        </ion-note>
+        <ion-note color="danger"
+          *ngIf="miFormulario.get('email')?.touched && miFormulario.get('email')?.hasError('email')">
+          Formato de correo inválido
+        </ion-note>
+        <br>
+        <div class="password-container">
+          <ion-input type="password" formControlName="password" label="Contraseña" label-placement="floating"
+            fill="solid" placeholder="••••••••" class="login-input-contraseña">
+          </ion-input>
+          <ion-note color="danger"
+            *ngIf="miFormulario.get('password')?.touched && miFormulario.get('password')?.hasError('required')">
+            La contraseña es obligatoria
+          </ion-note>
+          <ion-note color="danger"
+            *ngIf="miFormulario.get('password')?.touched && miFormulario.get('password')?.hasError('minlength')">
+            Mínimo 6 caracteres
+          </ion-note>
 
-  <ion-icon name="lock-closed" class="input-icon start"></ion-icon>
-  <ion-icon name="eye" class="input-icon end"></ion-icon>
-</div>
+          <ion-icon name="lock-closed" class="input-icon start"></ion-icon>
+          <ion-icon name="eye" class="input-icon end"></ion-icon>
+        </div>
 
-  </div>
+      </div>
 
-    <div class="ingresar-button">
-      <ion-button expand="block" type="submit" class="login-button">Ingresar</ion-button>
-  
-       <div class="separator">Or</div>
-      <ion-button expand="block" class="social-button google"><ion-icon slot="start" name="logo-google"></ion-icon>Continuar con Google</ion-button>
-      <ion-button expand="block" class="social-button facebook"><ion-icon slot="start" name="logo-facebook"></ion-icon>Continuar con Facebook</ion-button>
-    </div>
-  </form>
+      <div class="ingresar-button">
+        <ion-button expand="block" type="submit" class="login-button">Ingresar</ion-button>
+
+        <div class="separator">Or</div>
+        <ion-button expand="block" class="social-button google"><ion-icon slot="start"
+            name="logo-google"></ion-icon>Continuar con Google</ion-button>
+        <ion-button expand="block" class="social-button facebook"><ion-icon slot="start"
+            name="logo-facebook"></ion-icon>Continuar con Facebook</ion-button>
+      </div>
+    </form>
   </div>
 
   <p class="signup">¿No tienes una cuenta? <a href="#">Registrate</a></p>
