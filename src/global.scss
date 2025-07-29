@@ -43,3 +43,38 @@
   justify-content: center;
   height: 100%;
 }
+
+body{
+ion-item{
+    ion-icon{
+      margin-right: 12px;
+    }
+  }
+}
+
+body.modoOscuro{
+  ion-content{
+   --background: black; 
+  }
+  h1, h3{
+    color: white;
+  }
+  ion-tab-bar{
+    --background: rgb(33, 33, 33); 
+  }
+  ion-item{
+    --background: black; 
+    --color: white;
+    ion-icon{
+      color:white;
+      margin-right: 12px;
+    }
+  }
+  ion-list{
+    background: black;
+  }
+  ion-toolbar{
+    --background: black;
+    color: white;
+  }
+}

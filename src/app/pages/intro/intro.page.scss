@@ -54,7 +54,7 @@
     --margin-bottom: 10px;
     ---width: 100%;
     --border-radius: 12px;
-    --background: #6609af;
+    --background: #6156E2;
     --color: white;
     --border-radius: 20px;
     --text-transform: uppercase;
@@ -62,4 +62,10 @@
     --letter-spacing: 1px;
     --padding-start: 120px;
     --padding-end: 120px;
+  }
+
+  .contenedor-btn-intro{
+    display: flex;
+    display: flex;
+    flex-direction: column;
   }

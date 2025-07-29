@@ -6,9 +6,17 @@
     <form [formGroup]="miFormulario" (ngSubmit)="submit()">
       <div class="register-input">
         <div class="datos-personales-container">
-          <ion-input label="Nombre" label-placement="floating" fill="solid" placeholder="Nombre" class="datos-input-nombre"></ion-input>
+          <ion-input formControlName="nombre" label="Nombre" label-placement="floating" fill="solid" placeholder="Nombre" class="datos-input-nombre"></ion-input>
+          <ion-note color="danger"
+          *ngIf="miFormulario.get('nombre')?.touched && miFormulario.get('nombre')?.hasError('required')">
+          El nombre es obligatorio
+        </ion-note>
           <br>
-          <ion-input label="Apellido" label-placement="floating" fill="solid" placeholder="Apellido" class="datos-input-apellido"></ion-input>
+          <ion-input formControlName="apellido" label="Apellido" label-placement="floating" fill="solid" placeholder="Apellido" class="datos-input-apellido"></ion-input>
+          <ion-note color="danger"
+          *ngIf="miFormulario.get('apellido')?.touched && miFormulario.get('apellido')?.hasError('required')">
+          El apellido es obligatorio
+        </ion-note>
           <br>
         </div>
         <ion-input 

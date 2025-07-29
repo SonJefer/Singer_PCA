@@ -1,12 +1,15 @@
 <ion-content>
-  <swiper-container pagination="true" slides-per-view="1">
-
+  <swiper-container #swiperIntro pagination="true" slides-per-view="1">
     <swiper-slide *ngFor="let introcontent of intro_content">
       <div class="slide-content-intro">
         <img [src]="introcontent.image" [alt]="introcontent.title">
         <h1>{{introcontent.title}}</h1>
         <h3>{{introcontent.subtitle}}</h3>
-        <ion-button>Continuar</ion-button>
+        <div class="contenedor-btn-intro">
+          <ion-button (click)="next()">Continuar</ion-button>
+          <ion-button fill="outline" (click)="enviarLogin()">Finalizar</ion-button>
+        </div>
+
       </div>
     </swiper-slide>
   </swiper-container>

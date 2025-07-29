@@ -65,7 +65,7 @@
 
 
 .crear-cuenta-button {
-  --background: #3b82f6;
+  margin-top: 60px;
   color: white;
 }
 
@@ -107,8 +107,11 @@
   }
 }
 
-.login-input-correo,
-.login-input-contraseña {
+.register-input-correo,
+.register-input-contraseña,
+.datos-input-nombre,
+.datos-input-apellido
+ {
   width: 100%;
   --background: #f3f4f6;
   --border-radius: 12px;
@@ -117,3 +120,4 @@
   --color: #111;
   --placeholder-color: #9ca3af;
 }
+

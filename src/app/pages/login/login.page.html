@@ -38,14 +38,13 @@
       <div class="ingresar-button">
         <ion-button expand="block" type="submit" class="login-button">Ingresar</ion-button>
 
-        <div class="separator">Or</div>
-        <ion-button expand="block" class="social-button google"><ion-icon slot="start"
-            name="logo-google"></ion-icon>Continuar con Google</ion-button>
-        <ion-button expand="block" class="social-button facebook"><ion-icon slot="start"
-            name="logo-facebook"></ion-icon>Continuar con Facebook</ion-button>
+
       </div>
     </form>
   </div>
 
-  <p class="signup">¿No tienes una cuenta? <a href="#">Registrate</a></p>
+  <p class="signup">¿No tienes una cuenta? <a (click)="registroIr()">Registrate</a></p>
+
+  <ion-alert trigger="present-alert" header="Error" 
+    message="Datos de los usuarios incorrectos." [buttons]="alertButtons"></ion-alert>
 </ion-content>

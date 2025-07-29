@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { IonicModule } from '@ionic/angular';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-intro',
@@ -13,6 +14,9 @@ import { IonicModule } from '@ionic/angular';
   schemas:  [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class IntroPage implements OnInit {
+
+  @ViewChild('swiperIntro', { static: false }) swiperIntro!: ElementRef;
+
 
   intro_content = [
     
@@ -44,9 +48,18 @@ export class IntroPage implements OnInit {
     
   ]
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
+  }
+
+  next(){
+    console.log("next");
+    this.swiperIntro.nativeElement.swiper.slideNext();
+  }
+
+  enviarLogin(){
+    this.router.navigate(['/login'])
   }
 
 }
