@@ -69,4 +69,9 @@ export class RegisterPage implements OnInit {
   ngOnInit() {
   }
 
+  loginIr(){
+    this.router.navigateByUrl('/login', { replaceUrl: true });
+
+  }
+
 }
